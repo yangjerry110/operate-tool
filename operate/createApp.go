@@ -1,8 +1,8 @@
 /*
- * @Author: yangjie04@qutoutiao.net
+ * @Author: Jerry.Yang
  * @Date: 2022-09-07 14:34:01
- * @LastEditors: yangjie04@qutoutiao.net
- * @LastEditTime: 2022-09-14 16:08:30
+ * @LastEditors: Jerry.Yang
+ * @LastEditTime: 2022-09-15 17:17:09
  * @Description: create app
  */
 package operate
@@ -41,7 +41,7 @@ type (
 /**
  * @description: Action
  * @param {string} operateParam
- * @author: yangjie04@qutoutiao.net
+ * @author: Jerry.Yang
  * @date: 2022-09-07 14:37:39
  * @return {*}
  */
@@ -159,7 +159,7 @@ func (c *CreatedApp) Action(operateParam string) {
  * @param {string} appDir
  * @param {string} appName
  * @param {string} fileName
- * @author: yangjie04@qutoutiao.net
+ * @author: Jerry.Yang
  * @date: 2022-09-07 14:52:41
  * @return {*}
  */
@@ -197,7 +197,7 @@ func (c *CreateAppInputVO) CreateContent(appDir string, appName string, fileName
  * @param {string} projectName
  * @param {string} appName
  * @param {string} fileName
- * @author: yangjie04@qutoutiao.net
+ * @author: Jerry.Yang
  * @date: 2022-09-07 16:04:00
  * @return {*}
  */
@@ -278,7 +278,7 @@ func (c *CreateAppOutputVO) CreateContent(appDir string, projectName string, app
  * @param {string} appName
  * @param {string} fileName
  * @param {string} method
- * @author: yangjie04@qutoutiao.net
+ * @author: Jerry.Yang
  * @date: 2022-09-07 16:42:13
  * @return {*}
  */
@@ -364,7 +364,7 @@ func (c *CreateAppRoute) CreateContent(appDir string, projectName string, appNam
  * @param {string} appName
  * @param {string} fileName
  * @param {string} method
- * @author: yangjie04@qutoutiao.net
+ * @author: Jerry.Yang
  * @date: 2022-09-07 17:16:40
  * @return {*}
  */
@@ -414,7 +414,7 @@ func (c *CreateAppService) CreateContent(appDir string, projectName string, appN
  * @param {string} appName
  * @param {string} fileName
  * @param {string} fileContent
- * @author: yangjie04@qutoutiao.net
+ * @author: Jerry.Yang
  * @date: 2022-09-07 15:11:15
  * @return {*}
  */
@@ -482,7 +482,7 @@ func (c *CreatedApp) CreateFile(appDir string, appName string, fileName string, 
 /**
  * @description: CheckAppParams
  * @param {[]string} appParams
- * @author: yangjie04@qutoutiao.net
+ * @author: Jerry.Yang
  * @date: 2022-09-07 14:47:04
  * @return {*}
  */
@@ -493,11 +493,15 @@ func (c *CreatedApp) CheckAppParams(appParams []string) error {
 	 * @判断参数
 	 **/
 	if len(appParams) == 0 {
-		return errors.New("daoName缺失!")
+		return errors.New("projectName缺失!")
 	}
 
 	if len(appParams) == 1 {
-		return errors.New("modelName缺失!")
+		return errors.New("appName确实!")
+	}
+
+	if len(appParams) == 2 {
+		return errors.New("请求方式缺失!")
 	}
 	return nil
 }

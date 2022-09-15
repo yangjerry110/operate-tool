@@ -1,8 +1,8 @@
 /*
- * @Author: yangjie04@qutoutiao.net
+ * @Author: Jerry.Yang
  * @Date: 2022-09-07 14:30:23
- * @LastEditors: yangjie04@qutoutiao.net
- * @LastEditTime: 2022-09-15 10:30:21
+ * @LastEditors: Jerry.Yang
+ * @LastEditTime: 2022-09-15 17:17:57
  * @Description: baseOperate
  */
 package operate
@@ -20,7 +20,7 @@ type BaseOperate struct{}
  * @description: ExecOperate
  * @param {string} actOperate
  * @param {string} operateParam
- * @author: yangjie04@qutoutiao.net
+ * @author: Jerry.Yang
  * @date: 2022-09-07 14:32:09
  * @return {*}
  */
